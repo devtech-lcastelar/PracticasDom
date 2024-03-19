@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas con el dom</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Bandera Colombiana</h1>
+    <div id="container"></div>
+    <script>
+        const container = document.querySelector("#container");        
+        const content = document.createElement("div");
+        content.classList.add("content");
+        content.textContent = "!Significado¡";
+        container.appendChild(content)
+        
+        const p = document.createElement("p");
+        p.textContent = "Informacion contenida en el parrafo1"
+        container.appendChild
+
+        container.style.cssText = 'background: gray; width: 600px; height: 300px; padding: 100px'
+
+        content.style.cssText = 'background: yellow; width: 500px; height: 100px; '
+        
+        
+        //creando un nuevo div
+        const nuevoDiv = document.createElement("div");
+        nuevoDiv.classList.add("nuevoDiv");
+        nuevoDiv.textContent = "!Significado¡"
+        container.appendChild(nuevoDiv)
+        nuevoDiv.style.cssText = 'background: blue; width: 500px; height: 60px; color: white'
+
+        const nuevoDiv2 = document.createElement("div");
+        nuevoDiv2.classList.add("nuevoDiv2");
+        nuevoDiv2.textContent = "!Significado¡";
+        container.appendChild(nuevoDiv2);
+        nuevoDiv2.style.cssText = 'background: red; width: 500px; height: 45px; color: white'
+
+        //creando botones
+        const boton1 = document.createElement("button");
+        boton1.textContent = "click me"
+        container.appendChild(boton1)
+        boton1.style.cssText = 'background: yellow; '
+        
+        
+        const boton2 = document.createElement("button");
+        boton2.textContent = "click me"
+        container.appendChild(boton2)
+        boton2.style.cssText = 'background: blue; color: yellow'
+
+        const boton3 = document.createElement("button");
+        boton3.textContent = "click me"
+        container.appendChild(boton3)
+        boton3.style.cssText = 'background: red; color: blue'
+
+        boton1.addEventListener("click", function(){
+            content.innerHTML = "Representa la riqueza de nuestro suelo!"
+            content.style.color = "blue"
+
+        })
+
+        boton2.addEventListener("click", function(){
+            nuevoDiv.innerHTML = "Representa los oceanos de nuestras costas"
+            nuevoDiv.style.color = "red"
+        })
+
+        boton3.addEventListener("click", function(){
+            nuevoDiv2.innerHTML = "Representa la sangre derramada"
+            nuevoDiv2.style.color = "yellow"
+
+        })
+
+        boton1.addEventListener('mouseover', function(event) {
+        // highlight the mouseover target
+         event.target.style.color = 'red';
+        }, false);
+    </script>    
+</body>
+</html>
