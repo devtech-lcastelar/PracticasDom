@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas dom</title>
+    <style>
+        :root{
+            --blue: #73C6B6;
+            --orange: #E67E22;
+            --green: #2ECC71;
+            --purpura: #8E44AD;
+            --yellow: #F4D03F;
+            --gray: #5D6D7E;
+            --white: #F7F9F9;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #a2f1e2;
+        }
+        #div1{
+            background-color: #3be7c8;
+            width: auto;
+            height:auto;
+        }
+        #demo{
+            font-size: 18px;
+            color: rgb(214, 88, 109);
+            text-align: right;
+            
+        }
+        #h1{
+            text-align: center;
+            font-size: 44px;
+        }
+        .nav{
+            background-color: #a0c4eb;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: space-between;         
+            
+        }
+        .ul{
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            gap: 2em;            
+                              
+        }
+        #div3{
+            display: flex;
+        }
+        #div4{
+            background-color: #F7F9F9;
+            width: 1020px;
+            height: 600px;
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        #div5{
+            background-color: #F4D03F;
+            width: 900px;
+            height: 600px;
+            display: flex;
+            flex-direction: row;            
+        }
+        #tareas{
+
+            background-color: #5D6D7E;
+            width: 900px;
+            height: 400px;
+        }
+        #boton1{
+            background-color: #E67E22;
+            width: 80px;
+            height: 40px;
+            margin: 20px;
+            font-size: 20px;
+            border-radius: 20%;
+        }
+        #boton2{
+            background-color: #28bb54;
+            width: 80px;
+            height: 40px;
+            margin: 20px;
+            font-size: 20px;border-radius: 20%;
+        }
+        h3{
+            align-items: center;
+            color: rgb(69, 69, 71);
+            margin-left: 600px;    
+            }
+
+    </style>
+</head>
+<body>
+    <div id="div1"><h1 id="h1">Developer Tic</h1></div>
+    <p id="demo">Sitio en construccion</p>
+    <nav class="nav">
+        <ul class="ul">
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact</li>
+            <li>Blog</li>
+        </ul>
+    </nav>    
+    <div id="div3">
+        <div id="div4">
+            <h2>Informacion Usuarios</h2>
+            <form action="#" id="entradaUsuarios">
+                <input type="text" placeholder="Ingresar Actividad">
+                <input type="submit" value="+" id="agregarBoton">
+            </form>
+            <div id="tareas" class="contenedor_Tareas"></div>
+            <button id="boton1">submit</button>
+            <button id="boton2">submit</button>
+        </div>        
+        <div id="div5">
+            <h2>Informacion services</h2>        
+        </div> 
+    </div>    
+    <div><footer>Derechos de Autor</footer><h3>Sitio en construccion</h3></div>
+    <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d;
+    </script>    
+</body>
+</html>
